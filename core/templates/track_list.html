@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Tracks</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      SUPER TRACKS
+    </header>
+    <div class="container">
+      <section class="tracks">
+        <article class="track">
+          <span class="track__data">Track</span
+          ><span class="track__data">Artist</span>
+          <span class="track__data">Album</span>
+        </article>
+        {% for track in tracks %}
+        <article class="track track-row">
+          <span class="track__data">{{ track.Name }}</span
+          ><span class="track__data">{{ track.Artist }}</span>
+          <span class="track__data">{{ track.Album }}</span>
+        </article>
+        {% endfor %}
+      </section>
+    </div>
+  </body>
+</html>
