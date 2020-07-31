@@ -1,11 +1,31 @@
 # Super Tracks [![CodeFactor](https://www.codefactor.io/repository/github/kardoso/supertracks/badge)](https://www.codefactor.io/repository/github/kardoso/supertracks) [![](https://img.shields.io/badge/Python-3.8.2-blue.svg)](https://www.python.org/downloads/release/python-382/) [![](https://img.shields.io/badge/Django-3.0.8-green)](https://www.djangoproject.com/) [![](https://img.shields.io/github/license/kardoso/SuperTracks.svg)](https://github.com/kardoso/SuperTracks/blob/master/LICENSE)
 
 Super Tracks is a small and simple web application that lists music tracks from a database, showing the following columns:
+
 - Track Name
 - Artist Name
 - Album Title
 
 ## Running the application
+
+### Using Docker
+
+Build Dockerfile
+
+```
+docker build -t super-tracks -f Dockerfile .
+```
+
+Run the application
+
+```
+docker run -it -p 80:8000 super-tracks
+```
+
+The application will be up at `http://localhost/`
+
+### Using Python
+
 To run this application it's recommended that you use a virtual environment, so you'll have a controlled environment just for this application.
 If you don`t want to use a virtual environment skip steps 2 and 3.
 
