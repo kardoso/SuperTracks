@@ -22,6 +22,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
     python3-dev \
     python3-venv \
     git \
+    postgresql \
+    postgresql-contrib \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -31,6 +33,4 @@ RUN pip install -U pip setuptools
 COPY requirements.txt /app/
 RUN pip install -r /app/requirements.txt
 
-# Django service
-EXPOSE 8000
-CMD python manage.py runserver 0.0.0.0:8000
+COPY . /app
