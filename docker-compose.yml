@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=supertracksuser
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=supertracks
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+
+  web:
+    build: .
+    command:
+      [
+        "./wait-for-postgres.sh",
+        "db",
+        "python",
+        "manage.py runserver 0.0.0.0:8000",
+      ]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - "db"
