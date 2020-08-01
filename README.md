@@ -8,16 +8,14 @@ Super Tracks is a small and simple web application that lists music tracks from 
 
 ## Running the application
 
-I'll assume you have Docker and Docker Compose already installed.
-
-Use the following command to run the application:
+Assuming you already have Docker and Docker Compose installed, run the following command at the root folder of the repository to build and start the application:
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
-It'll take sometime because it will set up and initialize the database and the application. Go drink some water and wait.
+It'll take some time because it will set up the containers, initialize the database and the application. Go drink some water and wait.
 
 When it's done you'll see the message `Quit the server with CONTROL-C.` and you can now access the application from the browser at http://localhost:8000/
 
-Alternatively you can run `docker-compose up -d` to run in the background. After it you can run `docker-compose stop <service_name>` to stop running containers.
+Alternatively, you can run `docker-compose up -d` to run in the background. After it, you can run `docker-compose stop <service_name>` to stop running containers.
