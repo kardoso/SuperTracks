@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'super_tracks.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'Chinook_Sqlite.sqlite'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'supertracks',
+        'USER': 'supertracksuser',
+        'PASSWORD': 'password',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
