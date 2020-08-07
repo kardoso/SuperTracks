@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 def list_tracks(request):
     tracks_info = []
-    tracks = Track.objects.all()
+    tracks = Track.objects.all().order_by('TrackId')
     for track in tracks:
         track_album = Album.objects.get(AlbumId=track.AlbumId)
         track_artist = Artist.objects.get(ArtistId=track_album.ArtistId)
