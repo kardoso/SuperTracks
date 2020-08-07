@@ -19,5 +19,6 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.list_tracks)
+    path('', views.list_tracks),
+    path('edit/<int:track_id>/', views.edit_track, name='edit_track_name'),
 ]

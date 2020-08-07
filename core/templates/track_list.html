@@ -18,17 +18,17 @@
     </header>
     <div class="container">
       <section class="tracks">
-        <article class="track">
+        <article class="track-header">
           <span class="track__data">Track</span
           ><span class="track__data">Artist</span>
           <span class="track__data">Album</span>
         </article>
         {% for track in tracks %}
-        <article class="track track-row">
+        <a href="/edit/{{track.Id}}/" class="track track-row">
           <span class="track__data">{{ track.Name }}</span
           ><span class="track__data">{{ track.Artist }}</span>
-          <span class="track__data">{{ track.Album }}</span>
-        </article>
+          <span class="track__data">{{ track.Album }}</span></a
+        >
         {% endfor %}
       </section>
     </div>

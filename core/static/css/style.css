@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 14px;
 }
@@ -84,7 +88,10 @@ header {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.track:first-of-type {
+.track-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   font-size: 22px;
   margin-bottom: 5px;
   background-color: transparent;
@@ -93,6 +100,9 @@ header {
   padding: 0 5px;
   font-weight: bold;
   color: white;
+  padding: 12px 5px;
+  align-items: center;
+  text-align: center;
 }
 
 .track__data {
