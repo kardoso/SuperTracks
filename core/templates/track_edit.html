@@ -14,7 +14,11 @@
   </head>
 
   <body>
-    <div>
+    <header>
+      SUPER TRACKS
+    </header>
+    <div class="form-div">
+      <h1>EDIT TRACK</h1>
       <form action="{% url 'edit_track_name' track_id %}" method="POST">
         {{ form }}
         <button type="submit">Save Track</button>

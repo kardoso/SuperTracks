@@ -118,3 +118,46 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 1);
 }
+
+.form-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 380px;
+  height: 120px;
+  font-size: 18px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+form > input {
+  font-size: 14px;
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+form > button {
+  color: #060125;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ff8901;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+form > button:hover {
+  background-color: #ffbb01;
+}
